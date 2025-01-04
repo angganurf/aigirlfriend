@@ -45,41 +45,22 @@
                         <div class="rounded-full p-2">
                             <div class="flex items-center">
                                 <span class="hidden sm:inline pl-6 pr-4 text-lg font-medium text-black whitespace-nowrap"> Describe your Music </span>                                    
-                                <button type="submit" class="mx-auto px-4 px-9 sm:px-12 py-3 sm:py-4 bg-yellow-400 rounded-full text-black border-none font-bold text-base sm:text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap" style="box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
+                                <button type="submit" class="btn-open mx-auto px-4 px-9 sm:px-12 py-3 sm:py-4 bg-yellow-400 rounded-full text-black border-none font-bold text-base sm:text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap" style="box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
                                     <span>Create</span>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>        
-        
-    </div>
-    <div class="top-buttons">
-        <a href="#" target="_blank" class="twitter-btn glow-button" id="twitterText">
-            <svg viewBox="0 0 24 24" width="24" height="24">
-                <path fill="currentColor" d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path>
-            </svg>
-            Twitter
-        </a>
-        <button id="copyCA" class="ca-btn glow-button">
-            CA:  <span id="caText"></span>
-            <div class="tooltip">Click to copy</div>
-        </button>
-    </div>
+                <div class="m-auto bg-center">
+                <section class="modal hidden overflow-auto">
+                <div class="flex">
+                    <img src="https://avatars.githubusercontent.com/u/62628408?s=96&v=4" width="50px" height="50px" alt="user" />
+                    <button class="btn-close">⨉</button>
+                </div>
+                <div>
 
-    <div class="app-container">
-        <header class="main-header">
-            <div class="header-content">
-                <div class="sparkle">✧</div>
-                <h1 id="mainTitle"></h1>
-                <div class="sparkle">✧</div>
-            </div>
-            <div class="header-glow"></div>
-        </header>
-
-        <div class="main-content">
+                <div class="main-content">
             <div class="left-panel" >
                 <div class="preview-section" id="bgcolor">
                         <div id="waifuImage">
@@ -220,6 +201,40 @@
                 </div>
             </div>
         </div>
+                </div>
+
+            <input type="email" id="email" placeholder="brendaneich@js.com" />
+            <button class="btn">Do Something</button>
+            </section>
+            </div>
+            <div class="overlay hidden"></div>
+            <!-- <button class="btn btn-open">Open Modal</button> -->
+           </div>  
+        </div>        
+    </div>
+    <div class="top-buttons">
+        <a href="#" target="_blank" class="twitter-btn glow-button" id="twitterText">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"></path>
+            </svg>
+            Twitter
+        </a>
+        <button id="copyCA" class="ca-btn glow-button">
+            CA:  <span id="caText"></span>
+            <div class="tooltip">Click to copy</div>
+        </button>
+    </div>
+
+    <div class="app-container">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="sparkle">✧</div>
+                <h1 id="mainTitle"></h1>
+                <div class="sparkle">✧</div>
+            </div>
+            <div class="header-glow"></div>
+        </header>
+
     </div>
 
     <script src="scripts.js"></script>
@@ -331,5 +346,36 @@
             .catch(error => console.error('Error fetching settings:', error));
             
         </script>
+        <script>
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const openModalBtn = document.querySelector(".btn-open");
+const closeModalBtn = document.querySelector(".btn-close");
+
+// close modal function
+const closeModal = function () {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+// close the modal when the close button and overlay is clicked
+closeModalBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+
+// close modal when the Esc key is pressed
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+});
+
+// open modal function
+const openModal = function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+// open modal event
+openModalBtn.addEventListener("click", openModal);
+            </script>
 </body>
 </html>
