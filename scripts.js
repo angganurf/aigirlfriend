@@ -311,7 +311,7 @@ function buildImagePrompt() {
     // Common positive traits
     prompt += 'full body portrait, perfect face, beautiful detailed eyes, ';
     prompt += 'looking at viewer, soft lighting, detailed face, high quality anime art style, ';
-    prompt += 'professional anime artwork, anime style, high detail illustration';
+    prompt += 'professional anime artwork, anime style, high detail illustration, transparent background';
 
     return prompt;
 }

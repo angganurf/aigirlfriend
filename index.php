@@ -8,6 +8,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="min-h-screen bg-white">
+        <div class="relative w-full h-screen overflow-hidden">
+            <img id="backgroundGradient"  alt="City Background" class="absolute inset-0 w-full h-full object-cover" style="filter: blur(3.5px) brightness(0.6) contrast(1.1) grayscale(0.53) saturate(1.1);">
+            <div class="relative z-10 h-full">
+                <div class="flex justify-center md:justify-end absolute w-full md:w-auto top-4 right-0 md:right-4 gap-4 px-4">
+                    <a href="https://pump.fun/coin/3KYMbNBjLzmwnA3cFjaHmv7oiDxXHQZt9h3dqYNcpump" target="_blank" class="text-black hover:text-gray-800 transition-colors">
+                        <img src="pump.png" alt="Pump" class="w-6 h-6">
+                    </a>
+                    <a href="https://x.com/Aimiyabilofi" target="_blank" class="text-white hover:text-gray-800 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                    </a>
+                    <a href="https://t.me/MiyabiLofiBot" target="_blank" class="text-white hover:text-gray-800 transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path></svg>
+                    </a>
+                </div>
+                <div class="flex flex-col items-center pt-20 md:pt-8">
+                    <div class="text-center mb-4">
+                    <button id="copyCA" class="ca-btn glow-button">
+                        CA:  <span id="caText"></span>
+                        <div class="tooltip">Click to copy</div>
+                    </button>
+                    </div>
+                    <p class="text-xl md:text-2xl font-poppins text-white md:mt-3">Create Your Own Girlfriend With</p>
+                    <div class="md:hidden text-center mt-4 mb-2"><p class="text-xl font-bold font-poppins text-black">彼女</p></div>
+                    <div class="text-center mt-2">
+                        <h1 class="text-[20vw] md:text-[18vw] lg:text-[20vw] font-bold font-poppins text-white leading-none tracking-wider" id="mainTitle"> </h1>
+                    </div>
+                </div>
+                <p class="hidden md:block absolute top-8 left-12 text-2xl font-bold font-poppins text-white">彼女</p>
+                <div class="absolute right-1/2 transform translate-x-1/2 bottom-0 h-[70%] md:h-[85%] w-[700px] m-auto">
+                    <img src="character1.png" alt="Anime Character" class="h-full w-full object-contain object-bottom">
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 px-4" >
+                    <div class="max-w-3xl mx-auto">
+                        <div class="rounded-full p-2">
+                            <div class="flex items-center">
+                                <span class="hidden sm:inline pl-6 pr-4 text-lg font-medium text-black whitespace-nowrap"> Describe your Music </span>                                    
+                                <button type="submit" class="mx-auto px-4 px-9 sm:px-12 py-3 sm:py-4 bg-yellow-400 rounded-full text-black border-none font-bold text-base sm:text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap" style="box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);">
+                                    <span>Create</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        
+    </div>
     <div class="top-buttons">
         <a href="#" target="_blank" class="twitter-btn glow-button" id="twitterText">
             <svg viewBox="0 0 24 24" width="24" height="24">
@@ -190,6 +238,7 @@
                 document.getElementById('mainTitle').textContent = data.mainTitle;
                 document.getElementById('caText').textContent = data.caText;                
                 document.getElementById('twitterText').href = data.twitterText;
+                document.getElementById('backgroundGradient').src = data.backgroundGradient;
                 // document.getElementById('placeholderText').textContent = data.placeholderText;
                 // Apply blur and opacity if provided
                 if (data.backgroundColor) {
